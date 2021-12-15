@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
 }
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key key}) : super(key: key);
+  TextEditingController nameController;
+  TextEditingController emailController;
+  TextEditingController phonenumberController;
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -72,6 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                 height: 4,
               ),
               TextField(
+                controller: widget.nameController,
                 decoration: InputDecoration(
                   hintText: 'Name',
                   border: OutlineInputBorder(
@@ -90,6 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                 height: 4,
               ),
               TextField(
+                controller: widget.emailController,
                 decoration: InputDecoration(
                   hintText: 'Email',
                   hintStyle: TextStyle(
@@ -111,6 +115,7 @@ class _LoginPageState extends State<LoginPage> {
                 height: 4,
               ),
               TextField(
+                controller: widget.phonenumberController,
                 decoration: InputDecoration(
                   hintText: 'Phone Number',
                   border: OutlineInputBorder(
